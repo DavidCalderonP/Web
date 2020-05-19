@@ -1,0 +1,29 @@
+<div style="text-align: center;"><span *ngIf="!flag" class="carga">Revisando algunas nubes...</span></div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-lg-6 mb-3" *ngFor="let x of pronostico.dataseries">
+            <div class="card border border-dark rounded-5">
+                <div class="card-img-wrapper" text-align="center">
+                    <h2 class="agency"> {{this.datename(''+x.date)}}</h2>
+                    <img *ngIf="x.weather=='clear'" src="/assets/soleado.png" align="right">
+                    <img *ngIf="x.weather=='pcloudy'" src="/assets/dom.png" align="right">
+                    <img *ngIf="x.weather=='lightrain'" src="/assets/rain.png" align="right">
+                    <img *ngIf="x.weather=='rain'" src="/assets/rain.png" align="right">
+                    <img *ngIf="x.weather=='snow'" src="/assets/nieve.png" align="right">
+                    <img *ngIf="x.weather=='cloudy'" src="/assets/nube.png" align="right">
+                    <img *ngIf="x.weather=='mcloudy'" src="/assets/muynublado.jpg" align="right">
+                    <img *ngIf="x.weather=='lightsnow'" src="/assets/nieve.png" align="right">
+                    <img *ngIf="x.weather=='snow'" src="/assets/nieve.png" align="right">
+                    <div>
+                        <ul>
+                            <li><img class="temp" src="/assets/calendario.jpg"><span>Fecha: {{this.formatear(''+x.date)}}</span></li>
+                            <li><img class="temp" src="/assets/tiempo.jpg"><span>Pronostico: {{x.weather}} </span></li>
+                            <li><img class="temp" src="/assets/term.jpg"><span>Temperaturas: Max: <span class="hot">{{x.temp2m.max}}</span>, Min: <span class="cold">{{x.temp2m.min}}</span></span></li>
+                            <li><img class="temp" src="/assets/wind.jpg"><span>Velocidades de viento de hasta: {{x.wind10m_max}} m/s</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+img{
+    max-height: 115px;
+    max-width: 115px;
+}
+ul{
+    list-style: none;
+}
+.temp{
+    max-height: 20px;
+    max-width: 20px;
+}
+h2{
+    text-align: center;
+}
+.hot{
+    color: red;
+}
+
+.cold{
+    color: royalblue;
+}
+
+.agency{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+.carga{
+    text-align: center;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: white;
+}
